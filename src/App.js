@@ -1,14 +1,19 @@
 import { Button } from "antd";
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
+import HotelsPage from "./Pages/HotelsPage";
+const router = createBrowserRouter([
+  {path: "/", element: <HomePage />},
+  {path: "/hotels", element: <HotelsPage />}, // dynamic route
 
+
+])
 function App() {
+
   return (
-    <div className="App">
-      <div className="text-center p-4">
-      <h1 className="text-4xl font-bold text-blue-600">Hello Tailwind!</h1>
-      <Button type="primary">Click Me</Button>
-    </div>
+    <RouterProvider router={router} />
+      
     
-    </div>
   );
 }
 
