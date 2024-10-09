@@ -5,9 +5,8 @@ import {
   XOutlined,
   LinkedinOutlined,
   UserOutlined,
-  DownOutlined,
 } from "@ant-design/icons";
-import { Menu, Dropdown, Button, Breadcrumb } from "antd";
+import { Breadcrumb } from "antd";
 
 const menuItems = [
   {
