@@ -1,8 +1,12 @@
 import React from 'react'
+import NavigationBar from './Components/NavigationBar'
 
 const WelcomeSection = () => {
   return (
-    <div>WelcomeSection</div>
+    <div>
+      
+      <NavigationBar/>
+    </div>
   )
 }
 
