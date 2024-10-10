@@ -9,7 +9,7 @@ const CustomDropdown = ({ items, header, withDownArrow, iconSize }) => {
         lg: "text-lg"
     }
     return (
-      <div className="mr-6">
+      <div className="mr-6 cursor-pointer">
         <Dropdown
           menu={{
             items: items.map((item) => ({
