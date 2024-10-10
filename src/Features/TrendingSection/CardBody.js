@@ -1,13 +1,12 @@
 import { ClockCircleOutlined, PushpinOutlined, StarFilled, StarOutlined } from '@ant-design/icons'
 import React from 'react'
-import "./CardBody.css"
 
 const CardBody
  = () => {
   return (
-    <div className='px-5'>
+    <div>
       <p className="location text-slate-500"><span className="location-icon"><PushpinOutlined /></span>Greater London, United Kingdom</p>
-      <h1 className='title font-bold text-lg'>Stonehenge, Windsor Castle, and Bath from London</h1>
+      <h1 className='title font-bold text-lg hover:text-sky-500'>Stonehenge, Windsor Castle, and Bath from London</h1>
    <div className="stars flex gap-2">
      <div className="star text-green-400">
       <StarFilled/>
