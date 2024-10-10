@@ -4,8 +4,8 @@ import React from 'react'
 const CardBody
  = () => {
   return (
-    <div>
-      <p className="location text-slate-500"><span className="location-icon"><PushpinOutlined /></span>Greater London, United Kingdom</p>
+    <div className='mt-3.5 px-3'>
+      <div className="location text-slate-500 "><span className="location-icon"><PushpinOutlined /></span>Greater London, United Kingdom</div>
       <h1 className='title font-bold text-lg hover:text-sky-500'>Stonehenge, Windsor Castle, and Bath from London</h1>
    <div className="stars flex gap-2">
      <div className="star text-green-400">
