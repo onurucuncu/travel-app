@@ -43,7 +43,7 @@ const NavigationBar = () => {
   return (
     <div className="relative w-full">
       {/* relative */}
-      <div className="bg-blue-900 opacity-30 absolute inset-0 z-0"></div>
+      <div className="bg-gray-800 opacity-30 absolute inset-0 z-0"></div>
       {/* absolute */}
       <div className="h-16 flex items-center justify-between font-sans text-sm bg-transparent border-b z-10 relative">
         <div className="left-menu-items bg-transparent flex">

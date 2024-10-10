@@ -4,7 +4,7 @@
 
 
 .backgroundImage {
-    background-image: url('/Users/kerimyilmaz/travel-app/src/Features/WelcomeSection/Components/wallpaperflare.com_wallpaper.jpg');
+    background-image: url('./Features/WelcomeSection/Components/wallpaperflare.com_wallpaper.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

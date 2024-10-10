@@ -3,10 +3,10 @@ import MenuItems from "./MenuItems";
 
 const MenuSection = () => {
   return (
-      <div className="relative w-full"> 
-          {/* relative  */}
-      <div className="bg-blue-900 opacity-30 absolute inset-0 z-0"></div>
-        {/* absolute */}
+    <div className="relative w-full">
+      {/* relative  */}
+      <div className="bg-gray-800 opacity-30 absolute inset-0 z-0"></div>
+      {/* absolute */}
       <div className="flex justify-between mx-16 py-2 z-10 relative">
         <div className="logo flex items-center justify-start">
           <div className="w-14 h-14 mr-4">
