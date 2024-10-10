@@ -1,13 +1,17 @@
-import React from 'react'
-import NavigationBar from './Components/NavigationBar'
+import React from 'react';
+import NavigationBar from './Components/NavigationBar';
+import MenuSection from './Components/MenuSection';
 
 const WelcomeSection = () => {
   return (
-    <div>
-      
-      <NavigationBar/>
+    <div className='backgroundImage'>
+      <div className='overlay'></div>
+      <div className='content'>
+        <NavigationBar />
+        <MenuSection />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default WelcomeSection
+export default WelcomeSection;
