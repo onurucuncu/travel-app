@@ -45,7 +45,7 @@ const NavigationBar = () => {
       {/* relative */}
       <div className="bg-gray-800 opacity-30 absolute inset-0 z-0"></div>
       {/* absolute */}
-      <div className="h-16 flex items-center justify-between font-sans text-sm bg-transparent border-b z-10 relative">
+      <div className="h-16 flex items-center justify-between font-rubik text-sm bg-transparent border-b z-10 relative">
         <div className="left-menu-items bg-transparent flex">
           <div className="my-4 border-r flex items-center justify-center">
             <div className={paragraphCSS}>(000) 999 - 898 - 999</div>

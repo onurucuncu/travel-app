@@ -1,6 +1,7 @@
 import React from 'react';
 import NavigationBar from './Components/NavigationBar';
 import MenuSection from './Components/MenuSection';
+import HeaderSection from './Components/HeaderSection';
 
 const WelcomeSection = () => {
   return (
@@ -9,6 +10,7 @@ const WelcomeSection = () => {
       <div className='content'>
         <NavigationBar />
         <MenuSection />
+        <HeaderSection/>
       </div>
     </div>
   );
