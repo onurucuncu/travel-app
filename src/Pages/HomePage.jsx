@@ -5,6 +5,7 @@ import TrendingSection from "../Features/TrendingSection";
 const HomePage = () => {
   return (
     <div>
+    
       <WelcomeSection />
       <TrendingSection />
     </div>
