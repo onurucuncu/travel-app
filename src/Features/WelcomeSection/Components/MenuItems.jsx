@@ -38,7 +38,7 @@ const dropdownItems = [
 
 const MenuItems = () => {
   return (
-    <div className='flex text-white items-center'>
+    <div className='flex text-white items-center font-rubik'>
       {dropdownItems.map((item) => (
         <CustomDropdown  items={item.items} header={item.header} withDownArrow={true} iconSize={"xs"} />
       ))}
