@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .backgroundImage {
     background-image: url('/Users/kerimyilmaz/travel-app/src/Features/WelcomeSection/Components/wallpaperflare.com_wallpaper.jpg');
     background-size: cover;
@@ -27,4 +28,6 @@
     position: relative;
     z-index: 2;
 }
+
+
 
