@@ -5,7 +5,7 @@ import "./CardHeader.css"
 const CardHeader = () => {
   return (
     <div className='card-header flex flex-col relative'>
-      <div class="absolute inset-0 bg-black opacity-0"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-30 rounded-lg"></div>
       <div className="head-line flex justify-between items-center ">
          <div className="left basis-3/4 relative">
             <div className="badge featured text-sky-500 bg-white rounded-3xl absolute top-4 left-3 px-4 py-2">Featured</div>

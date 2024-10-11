@@ -1,8 +1,10 @@
 import React from "react";
-import TrendingCard from "./TrendingCard";
+import CustomCard from "./CustomCard";
+
 
 const TrendingSection = () => {
-  return <div className="relative"><TrendingCard /></div>;
+
+  return <div><CustomCard /></div>;
 };
 
 export default TrendingSection;
