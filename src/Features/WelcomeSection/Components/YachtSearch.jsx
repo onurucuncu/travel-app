@@ -2,7 +2,7 @@ import { SearchOutlined, EnvironmentOutlined } from "@ant-design/icons";
 import { Button, Input } from "antd";
 import React from "react";
 
-const CarSearch = () => {
+const YachtSearch = () => {
   return (
     <div className="bg-white rounded-md flex items-center w-11/12 h-32 font-rubik">
       <div className="w-full p-4 flex justify-between">
@@ -35,4 +35,4 @@ const CarSearch = () => {
   );
 };
 
-export default CarSearch;
+export default YachtSearch;

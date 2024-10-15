@@ -9,7 +9,8 @@ const CustomDropdown = ({
   withDownArrow = false,
   withItemIcon = false,
   iconSize,
-  headerIconClasses = "",
+    headerIconClasses = "",
+  
 }) => {
   const iconSizes = {
     xs: "text-xs",
@@ -20,8 +21,8 @@ const CustomDropdown = ({
   if (items.length === 0) {
     return (
       <div className="mr-6 flex cursor-pointer">
-        <div className={headerIconClasses}>{withItemIcon && headerIcon}</div>
         <Space>
+        <div className={headerIconClasses}>{withItemIcon && headerIcon}</div>
           {header}
           {withDownArrow && <DownOutlined className={iconSizes[iconSize]} />}
         </Space>
@@ -34,15 +35,15 @@ const CustomDropdown = ({
       <Dropdown
         menu={{
           items: items.map((item) => ({
-            label: <div>{item}</div>,
+            label: <div className="bg-slate-400">{item}</div>,
             key: item,
             value: item,
           })),
         }}
       >
         <div className="flex">
-          <div className={headerIconClasses}> {withItemIcon && headerIcon}</div>
           <Space>
+          <div className={headerIconClasses}> {withItemIcon && headerIcon}</div>
             {header}
             {withDownArrow && <DownOutlined className={iconSizes[iconSize]} />}
           </Space>
