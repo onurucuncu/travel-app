@@ -1,5 +1,5 @@
 import React from "react";
-import MenuItems from "./MenuItems";
+import MenuItems from "../Constants/MenuItems";
 
 const MenuSection = () => {
   return (

@@ -1,5 +1,5 @@
-import React from 'react'
-import CustomDropdown from './CustomDropdown'
+import React from "react";
+import CustomDropdown from "../Components/CustomDropdown";
 
 const dropdownItems = [
   {
@@ -38,12 +38,17 @@ const dropdownItems = [
 
 const MenuItems = () => {
   return (
-    <div className='flex text-white items-center font-rubik'>
+    <div className="flex text-white items-center font-rubik">
       {dropdownItems.map((item) => (
-        <CustomDropdown  items={item.items} header={item.header} withDownArrow={true} iconSize={"xs"} />
+        <CustomDropdown
+          items={item.items}
+          header={item.header}
+          withDownArrow={true}
+          iconSize={"xs"}
+        />
       ))}
     </div>
   );
 };
 
-export default MenuItems
+export default MenuItems;

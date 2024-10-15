@@ -9,6 +9,8 @@ import { YachtIcon } from "../../../Icons/YachtIcon";
 import { Searchitems } from "../Constants/SearchSectionItems";
 import SearchBox from "../../../GlobalComponents/SearchBox";
 import HotelSearch from "./HotelSearch";
+import CustomDropdown from "./CustomDropdown";
+import SearchSectionItems from "../Constants/SearchSectionItems";
 const SearchSection = () => {
   const [currentCard, setCurrentCard] = useState("");
 
@@ -18,8 +20,8 @@ const SearchSection = () => {
   };
 
   return (
-    <div className="container mt-12">
-      <div className="searchbar-items flex">
+    <div className="container mt-12 w-full flex flex-col items-center justify-center">
+      {/* <div className="searchbar-items flex">
         <div onClick={() => handleDisplayCard("hotel")} className="hotel flex">
           <HotelIcon
             width={"40"}
@@ -89,14 +91,12 @@ const SearchSection = () => {
           />
           <Space className="text-white ml-3 mt-1 font-rubik">Yacht</Space>
         </div>
+      </div> */}
+      <div>
+        <SearchSectionItems />
       </div>
-      <div className="items-card">
-        <SearchBox>
-          <HotelSearch />
-        </SearchBox>
-        <SearchBox hasMutipleInputs={true}>
-          <div>2 test</div>
-        </SearchBox>
+      <div className="items-card w-full h-32 flex justify-center mb-4">
+        <HotelSearch />
       </div>
     </div>
   );
