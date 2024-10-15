@@ -39,8 +39,9 @@ const dropdownItems = [
 const MenuItems = () => {
   return (
     <div className="flex text-white items-center font-rubik">
-      {dropdownItems.map((item) => (
+      {dropdownItems.map((item,index) => (
         <CustomDropdown
+          key={index}
           items={item.items}
           header={item.header}
           withDownArrow={true}

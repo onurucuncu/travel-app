@@ -6,7 +6,6 @@ import { ActivityIcon } from '../../../Icons/ActivityIcon';
 import { CarIcon } from '../../../Icons/CarIcon';
 import { YachtIcon } from '../../../Icons/YachtIcon';
 import CustomDropdown from '../Components/CustomDropdown';
-import { getValue } from '@testing-library/user-event/dist/utils';
 
 
 const searchItems = [
