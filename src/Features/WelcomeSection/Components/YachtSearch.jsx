@@ -4,7 +4,7 @@ import React from "react";
 
 const YachtSearch = () => {
   return (
-    <div className="bg-white rounded-md flex items-center w-11/12 h-32 font-rubik">
+    <div className="bg-white rounded-md flex items-center w-11/12 h-32 font-rubik shadow-lg">
       <div className="w-full p-4 flex justify-between">
         <div className="content flex justify-between w-full mr-5">
           <div className="flex flex-col w-full mr-4">
