@@ -6,9 +6,9 @@ import SearchSection from './Components/SearchSection';
 
 const WelcomeSection = () => {
   return (
-    <div className='bg-black'>
+    <div className='bg-black w-full'>
       <div className='overlay'></div>
-      <div className='content'>
+      <div className='content w-full'>
         <NavigationBar />
         <MenuSection />
         <HeaderSection />
