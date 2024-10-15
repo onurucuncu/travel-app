@@ -11,8 +11,13 @@ import SearchBox from "../../../GlobalComponents/SearchBox";
 import HotelSearch from "./HotelSearch";
 import CustomDropdown from "./CustomDropdown";
 import SearchSectionItems from "../Constants/SearchSectionItems";
+import ActivitySearch from "./ActivitySearch";
+import ToursSearch from "./ToursSearch";
+import RentalSearch from "./RentalSearch";
+import CarSearch from "./CarSearch";
+import YachtSearch from "./YachtSearch";
 const SearchSection = () => {
-  const [currentCard, setCurrentCard] = useState("");
+  const [currentCard, setCurrentCard] = useState("hotel");
 
   const handleDisplayCard = (cardType) => {
     setCurrentCard(cardType);
@@ -21,7 +26,7 @@ const SearchSection = () => {
 
   return (
     <div className="container mt-12 w-full flex flex-col items-center justify-center">
-      {/* <div className="searchbar-items flex">
+      <div className="searchbar-items flex ml-32 mt-24 mb-6">
         <div onClick={() => handleDisplayCard("hotel")} className="hotel flex">
           <HotelIcon
             width={"40"}
@@ -91,12 +96,17 @@ const SearchSection = () => {
           />
           <Space className="text-white ml-3 mt-1 font-rubik">Yacht</Space>
         </div>
-      </div> */}
-      <div>
-        <SearchSectionItems />
       </div>
-      <div className="items-card w-full h-32 flex justify-center mb-4">
-        <HotelSearch />
+      {/* <div>
+        <SearchSectionItems />
+      </div> */}
+      <div className="items-card w-full h-32 flex justify-center mt-5 ml-36">
+        {currentCard === "hotel" && <HotelSearch />}
+        {currentCard === "tour" && <ToursSearch />}
+        {currentCard === "activity" && <ActivitySearch />}
+        {currentCard === "rental" && <RentalSearch />}
+        {currentCard === "car" && <CarSearch />}
+        {currentCard === "yacht" && <YachtSearch />}
       </div>
     </div>
   );

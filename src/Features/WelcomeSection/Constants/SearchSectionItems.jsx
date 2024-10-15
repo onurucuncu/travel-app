@@ -6,6 +6,7 @@ import { ActivityIcon } from '../../../Icons/ActivityIcon';
 import { CarIcon } from '../../../Icons/CarIcon';
 import { YachtIcon } from '../../../Icons/YachtIcon';
 import CustomDropdown from '../Components/CustomDropdown';
+import { getValue } from '@testing-library/user-event/dist/utils';
 
 
 const searchItems = [
@@ -83,17 +84,26 @@ const searchItems = [
   },
 ];
 const SearchSectionItems = () => {
+    const handleClick = (event) => {
+      console.log("Clicked element:", event.target);
+      console.log("Event object:", event);
+      console.log("Element ID:", event.target.id);
+      console.log("Element class list:", event.target.classList);
+      console.log("Element text content:", event.target.textContent);
+    };
    return (
-     <div className="flex text-white items-center font-rubik">
-       {searchItems.map((item,index) => (
+     <div
+       className="flex text-white items-center font-rubik"
+       onClick={handleClick}
+     >
+       {searchItems.map((item, index) => (
          <CustomDropdown
            key={index}
            items={item.items}
            header={item.header}
            headerIcon={item.icon}
            withItemIcon={true}
-               headerIconClasses='mr-4'
-        
+           headerIconClasses="mr-4"
          />
        ))}
      </div>
