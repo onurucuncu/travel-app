@@ -7,7 +7,7 @@ const PillComponent = ({ text, color }) => {
   }
   return (
     <div
-      className={`bg-white fo ${defaultColors[color]} px-3 py-2 rounded-2xl`}
+      className={` text-lg bg-white fo ${defaultColors[color]} px-5 py-1 rounded-full`}
     >
       {text}
     </div>

@@ -30,6 +30,7 @@ const CustomCard = ({ cardData, showPrice, showFeatured, currentTitle }) => {
     reviewText,
     locationText,
     placeText,
+    imageUrl,
     timeText,
     currentPriceText,
     featuredText,
@@ -37,13 +38,12 @@ const CustomCard = ({ cardData, showPrice, showFeatured, currentTitle }) => {
   } = cardData;
 
   return (
-    <div className="font-rubik">
-      <div className="card w-80 h-96 border rounded-lg overflow-hidden hover:-translate-y-3 hover:shadow-2xl transition delay-150 duration-300 ease-in-out">
+    
+      <div className="card border rounded-lg overflow-hidden font-rubik hover:-translate-y-3 hover:shadow-2xl transition delay-150 duration-300 ease-in-out" style={{height: "540px", width: "360px"}}>
         <div
-          className="card-top flex flex-col justify-between h-48 bg-cover bg-center"
+          className="card-top flex flex-col justify-between h-1/2 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://mytravel.madrasthemes.com/wp-content/uploads/2022/03/stone-resize-300x225.jpg)",
+            backgroundImage: `url(${imageUrl})`,
             backgroundBlendMode: "overlay",
             backgroundColor: "rgba(0, 0, 0, 0.4)",
           }}
@@ -81,7 +81,7 @@ const CustomCard = ({ cardData, showPrice, showFeatured, currentTitle }) => {
           </div>
 
           <div className="card-top-bottom px-5 pb-2 text-white">
-            <span className="text-md font-semibold cursor-pointer hover:text-neutral-300 transition delay-150 duration-150 ease-in-out">
+            <span className="text-lg font-semibold cursor-pointer hover:text-neutral-300 transition delay-150 duration-150 ease-in-out">
               {tourNameText}
             </span>
 
@@ -99,17 +99,17 @@ const CustomCard = ({ cardData, showPrice, showFeatured, currentTitle }) => {
           </div>
         </div>
 
-        <div className="card-bottom p-4 h-48 bg-white cursor-pointer group">
+        <div className="card-bottom p-4 h-1/2 bg-white cursor-pointer group">
           <div className="location-text flex items-center mb-2">
             <EnvironmentOutlined className="text-gray-500 mr-2" />
-            <span className="text-gray-800">{locationText}</span>
+            <span className="text-lg text-gray-800">{locationText}</span>
           </div>
 
-          <div className="place-text text-xl font-semibold mb-3 group-hover:text-sky-500 transition-colors">
+          <div className="place-text text-2xl font-semibold mb-3 group-hover:text-sky-500 transition-colors">
             {placeText}
           </div>
 
-          <div className="star-rating flex items-center mb-3 text-xl">
+          <div className="star-rating flex items-center mb-3 text-2xl">
             <div className="mr-2">
               {Array.from({ length: 5 }, (_, index) =>
                 index + 0.5 <= ratingValue ? (
@@ -133,11 +133,11 @@ const CustomCard = ({ cardData, showPrice, showFeatured, currentTitle }) => {
 
           <div className="time-arrived flex items-center text-gray-600">
             <ClockCircleOutlined className="mr-2" />
-            <span>{timeText}</span>
+            <span className="text-lg">{timeText}</span>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

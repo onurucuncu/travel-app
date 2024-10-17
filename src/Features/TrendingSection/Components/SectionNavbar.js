@@ -3,18 +3,19 @@ import React from "react";
 const SectionNavbar = ({ setCurrentTitle }) => {
   const handleDisplayTitle = (titleName) => {
     setCurrentTitle(titleName);
-    console.log(titleName,"title");
+    console.log(titleName, "title");
   };
+
   return (
-    <div className="container mt-12 w-full flex flex-col items-center justify-center">
-      <div className="section-title block text-black font-medium font-rubik text-center py-10 text-6xl mb-0">
+    <div className="mt-12 w-full flex flex-col items-center justify-center">
+      <div className="section-title block text-black font-medium font-rubik text-center py-10 text-4xl mb-0">
         Trending
       </div>
-      <div className="w-10 h-0.5 bg-sky-500 mx-auto mt-6 mb-0"></div>
-      <div className="title flex gap-2 justify-between mt-24 mb-6">
+      <div className="w-14 h-0.5 bg-sky-800 mx-auto"></div>
+      <div className="title flex gap-2 justify-between mt-4 mb-6">
         <div
           onClick={() => handleDisplayTitle("tour")}
-          className="tour text-black font-rubik text-2xl px-10 py-4 hover:bg-sky-800 hover:text-white hover:rounded-full"
+          className="tour text-black font-rubik text-2xl px-10 py-4 hover:bg-sky-800 hover:text-white hover:rounded-full "
         >
           Tour
         </div>
