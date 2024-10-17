@@ -11,7 +11,7 @@ import {
 
 import PillComponent from "./PillComponent";
 
-const CustomCard = ({ cardData, showPrice, showFeatured }) => {
+const CustomCard = ({ cardData, showPrice, showFeatured, currentTitle }) => {
   const [isFavourite, setIsFavourite] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -44,29 +44,24 @@ const CustomCard = ({ cardData, showPrice, showFeatured }) => {
           style={{
             backgroundImage:
               "url(https://mytravel.madrasthemes.com/wp-content/uploads/2022/03/stone-resize-300x225.jpg)",
+            backgroundBlendMode: "overlay",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
           }}
         >
-          {/* <div
-            // className="absolute inset-0 bg-black opacity-40 rounded-lg"
-            // style={{ background: "radial-gradient(circle, transparent, rgba(0, 0, 0, 0.6))" }}
-          ></div> */}
-
           <div className="card-top-top flex justify-between pills px-5 pt-7">
             <div className="flex gap-2">
               {showFeatured && (
-              <div className="">
-              <PillComponent text={featuredText} color="featured" />
+                <div className="">
+                  <PillComponent text={featuredText} color="featured" />
+                </div>
+              )}
+
+              {showPrice && (
+                <div className="">
+                  <PillComponent text={discountText} color="discount" />
+                </div>
+              )}
             </div>
-            )}
-            
-            {showPrice && (
-              <div className="">
-              <PillComponent text={discountText} color="discount" />
-            </div>
-            )}
-            </div>
-            
-            
 
             <div className="cursor-pointer">
               {isLoading ? (
@@ -85,24 +80,22 @@ const CustomCard = ({ cardData, showPrice, showFeatured }) => {
             </div>
           </div>
 
-          <div className="card-top-bottom px-5 text-white">
+          <div className="card-top-bottom px-5 pb-2 text-white">
             <span className="text-md font-semibold cursor-pointer hover:text-neutral-300 transition delay-150 duration-150 ease-in-out">
               {tourNameText}
             </span>
 
-            
-              <div className="text-lg font-bold">
-                {showPrice && (
-                  <span className="discount line-through text-md mr-1">
+            <div className="text-lg font-bold">
+              {showPrice && (
+                <span className="discount line-through text-md mr-1">
                   {oldPriceText}
                 </span>
-                )}
-                
-                <span className="current text-2xl font-bold">
-                  {currentPriceText}
-                </span>
-              </div>
-            
+              )}
+
+              <span className="current text-2xl font-bold">
+                {currentPriceText}
+              </span>
+            </div>
           </div>
         </div>
 
