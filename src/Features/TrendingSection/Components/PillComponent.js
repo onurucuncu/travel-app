@@ -2,12 +2,12 @@ import React from "react";
 
 const PillComponent = ({ text, color }) => {
   const defaultColors = {
-    featured: "sky",
-    discount: "red",
+    featured: "text-sky-500",
+    discount: "text-red-600",
   }
   return (
     <div
-      className={`bg-white fo text-${defaultColors[color]}-500 px-3 py-2 rounded-2xl`}
+      className={` text-lg bg-white fo ${defaultColors[color]} px-5 py-1 rounded-full`}
     >
       {text}
     </div>
