@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SectionNavbar from "./Components/SectionNavbar";
 import cardData from "./Constant/CardData";
 import CardSection from "./Components/CardSection";
+import iconData from "./Constant/IconData";
 
 const TrendingSection = () => {
   
@@ -17,7 +18,7 @@ const TrendingSection = () => {
   return (
     <div className="mt-32 h-screen">
       <SectionNavbar setCurrentTitle={setCurrentTitle} />
-      <CardSection currentTitle={currentTitle} cardsData={cardsData} />
+      <CardSection currentTitle={currentTitle} cardsData={cardsData} iconData={iconData} />
     </div>
   );
 };
