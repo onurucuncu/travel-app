@@ -11,18 +11,18 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 
-const iconData = [
+const iconData = 
   {
-    area: <BorderInnerOutlined />,
-    room: <GroupOutlined />,
-    shower: <FormatPainterOutlined />,
-    bedroom: <FolderOutlined />,
-    speed: <RocketOutlined />,
-    gear: <PullRequestOutlined />,
-    fuel: <VideoCameraOutlined />,
-    model: <FieldBinaryOutlined />,
-    longiutude: <ExpandAltOutlined />,
-    person: <TeamOutlined />,
-  },
-];
+    areaIcon: <BorderInnerOutlined />,
+    roomIcon: <GroupOutlined />,
+    showerIcon: <FormatPainterOutlined />,
+    bedIcon: <FolderOutlined />,
+    rangeIcon: <RocketOutlined />,
+    gearIcon: <PullRequestOutlined />,
+    fuelIcon: <VideoCameraOutlined />,
+    modelIcon: <FieldBinaryOutlined />,
+    longiutudeIcon: <ExpandAltOutlined />,
+    personIcon: <TeamOutlined />,
+  }
+
 export default iconData;
