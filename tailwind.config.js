@@ -5,11 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-       fontFamily: {
+      fontFamily: {
         rubik: ['Rubik', 'sans-serif'], // Rubik fontunu tanımlıyoruz
+      },
+      colors: {
+        darky: '#3b444f', // 'darky' adında yeni bir renk tanımlıyoruz
       },
     },
   },
   plugins: [],
 }
-
