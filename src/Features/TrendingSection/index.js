@@ -9,16 +9,14 @@ const TrendingSection = () => {
 
   const [cardsData, setCardsData] = useState(cardData);
 
-  console.log(cardData, "carddata");
-
   const [currentTitle, setCurrentTitle] = useState("tour");
 
   console.log(currentTitle, "currentTitle");
 
   return (
     <div className="mt-32 h-screen">
-      <SectionNavbar setCurrentTitle={setCurrentTitle} />
-      <CardSection currentTitle={currentTitle} cardsData={cardsData} iconData={iconData} />
+      <SectionNavbar setCurrentTitle={setCurrentTitle} currentTitle={currentTitle} />
+      <CardSection currentTitle={currentTitle} cardsData={cardsData} iconData={iconData} name={currentTitle} />
     </div>
   );
 };

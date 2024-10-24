@@ -1,45 +1,26 @@
 import React from "react";
-import TourCards from "../Pages/TourCards";
-import HotelCards from "../Pages/HotelCards";
-import ActivityCards from "../Pages/ActivityCards";
-import RentalCards from "../Pages/RentalCards";
-import CarCards from "../Pages/CarCards";
-import YatchCards from "../Pages/YatchCards";
+import CustomCard from "./CustomCard";
 
-const CardSection = ({ currentTitle, cardsData, iconData }) => {
+const CardSection = ({ currentTitle, cardsData, iconData, name }) => {
 
   return (
     <div className="titles-card w-full h-32 flex justify-center mt-5">
-      {currentTitle === "tour" && (
-        <TourCards currentTitle={currentTitle} cardsData={cardsData} />
+      <div className="w-11/12 flex justify-between flex-wrap gap-10 px-20">
+      {cardsData.map(
+        (cardData, index) =>
+          cardData.card_type === name && (
+            <CustomCard
+              key={index}
+              currentTitle={currentTitle}
+              cardData={cardData}
+              showPrice={cardData.discountText !== null}
+              showFeatured={cardData.featuredText !== null}
+              iconData={iconData}
+            />
+          )
       )}
-      {currentTitle === "hotel" && (
-        <HotelCards currentTitle={currentTitle} cardsData={cardsData} />
-      )}
-      {currentTitle === "activity" && (
-        <ActivityCards currentTitle={currentTitle} cardsData={cardsData} />
-      )}
-      {currentTitle === "rental" && (
-        <RentalCards
-          currentTitle={currentTitle}
-          cardsData={cardsData}
-          iconData={iconData}
-        />
-      )}
-      {currentTitle === "car" && (
-        <CarCards
-          currentTitle={currentTitle}
-          cardsData={cardsData}
-          iconData={iconData}
-        />
-      )}
-      {currentTitle === "yatch" && (
-        <YatchCards
-          currentTitle={currentTitle}
-          cardsData={cardsData}
-          iconData={iconData}
-        />
-      )}
+      </div>
+     
     </div>
   );
 };

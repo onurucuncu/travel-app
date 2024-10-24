@@ -138,8 +138,7 @@ const CustomCard = ({
       <div className="card-bottom p-4 h-1/2 bg-white cursor-pointer group">
         {currentTitle === "rental" ||
         currentTitle === "car" ||
-        currentTitle === "yatch"
-       ? (
+        currentTitle === "yatch" ? (
           card_type === currentTitle && (
             <RCYCustomBottomCard
               cardData={cardData}
@@ -148,17 +147,14 @@ const CustomCard = ({
             />
           )
         ) : currentTitle === "hotel" || currentTitle === "activity" ? (
-          (
-            card_type === currentTitle && (
-              <HACustomBottomCard
-                cardData={cardData}
-                currentTitle={currentTitle}
-                showPrice={showPrice}
-              />
-            )
+          card_type === currentTitle && (
+            <HACustomBottomCard
+              cardData={cardData}
+              currentTitle={currentTitle}
+              showPrice={showPrice}
+            />
           )
-        ):
-        (
+        ) : (
           <>
             <div className="location-text flex items-center mb-2">
               <EnvironmentOutlined className="text-gray-500 mr-2" />
