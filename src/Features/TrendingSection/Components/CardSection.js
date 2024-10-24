@@ -7,6 +7,7 @@ import CarCards from "../Pages/CarCards";
 import YatchCards from "../Pages/YatchCards";
 
 const CardSection = ({ currentTitle, cardsData, iconData }) => {
+
   return (
     <div className="titles-card w-full h-32 flex justify-center mt-5">
       {currentTitle === "tour" && (
@@ -19,13 +20,25 @@ const CardSection = ({ currentTitle, cardsData, iconData }) => {
         <ActivityCards currentTitle={currentTitle} cardsData={cardsData} />
       )}
       {currentTitle === "rental" && (
-        <RentalCards currentTitle={currentTitle} cardsData={cardsData} iconData={iconData} />
+        <RentalCards
+          currentTitle={currentTitle}
+          cardsData={cardsData}
+          iconData={iconData}
+        />
       )}
       {currentTitle === "car" && (
-        <CarCards currentTitle={currentTitle} cardsData={cardsData} iconData={iconData} />
+        <CarCards
+          currentTitle={currentTitle}
+          cardsData={cardsData}
+          iconData={iconData}
+        />
       )}
       {currentTitle === "yatch" && (
-        <YatchCards currentTitle={currentTitle} cardsData={cardsData} iconData={iconData} />
+        <YatchCards
+          currentTitle={currentTitle}
+          cardsData={cardsData}
+          iconData={iconData}
+        />
       )}
     </div>
   );

@@ -1,7 +1,7 @@
 import { EnvironmentOutlined } from "@ant-design/icons";
 import React from "react";
 
-const CustomBottomCard = ({ cardData, iconData, currentTitle }) => {
+const RCYCustomBottomCard = ({ cardData, iconData, currentTitle }) => {
   const {
     pointNumber,
     reviewText,
@@ -119,4 +119,4 @@ const CustomBottomCard = ({ cardData, iconData, currentTitle }) => {
   );
 };
 
-export default CustomBottomCard;
+export default RCYCustomBottomCard;

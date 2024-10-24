@@ -1,9 +1,9 @@
 import React from "react";
+import { titleList } from "../Constant/SectionTitles";
 
 const SectionNavbar = ({ setCurrentTitle }) => {
   const handleDisplayTitle = (titleName) => {
     setCurrentTitle(titleName);
-    console.log(titleName, "title");
   };
 
   return (
@@ -13,42 +13,17 @@ const SectionNavbar = ({ setCurrentTitle }) => {
       </div>
       <div className="w-14 h-0.5 bg-sky-800 mx-auto"></div>
       <div className="title flex gap-2 justify-between mt-4 mb-6">
-        <div
-          onClick={() => handleDisplayTitle("tour")}
-          className="tour text-black font-rubik text-2xl px-10 py-4 hover:bg-sky-800 hover:text-white hover:rounded-full "
-        >
-          Tour
-        </div>
-        <div
-          onClick={() => handleDisplayTitle("hotel")}
-          className="hotel text-black font-rubik text-2xl px-10 py-4 hover:bg-sky-800 hover:text-white hover:rounded-full"
-        >
-          Hotel
-        </div>
-        <div
-          onClick={() => handleDisplayTitle("activity")}
-          className="activity text-black font-rubik text-2xl px-10 py-4 hover:bg-sky-800 hover:text-white hover:rounded-full"
-        >
-          Activity
-        </div>
-        <div
-          onClick={() => handleDisplayTitle("rental")}
-          className="rental text-black font-rubik text-2xl px-10 py-4 hover:bg-sky-800 hover:text-white hover:rounded-full"
-        >
-          Rental
-        </div>
-        <div
-          onClick={() => handleDisplayTitle("car")}
-          className="car text-black font-rubik text-2xl px-10 py-4 hover:bg-sky-800 hover:text-white hover:rounded-full"
-        >
-          Car
-        </div>
-        <div
-          onClick={() => handleDisplayTitle("yatch")}
-          className="yatch text-black font-rubik text-2xl px-10 py-4 hover:bg-sky-800 hover:text-white hover:rounded-full"
-        >
-          Yatch
-        </div>
+        {titleList.map((title) => {
+          return (
+            <div
+              key={title.id}
+              onClick={() => handleDisplayTitle(title.id)}
+              className={`${title.id} text-black font-rubik text-2xl px-10 py-4 hover:bg-sky-800 hover:text-white hover:rounded-full cursor-pointer`}
+            >
+              {title.label}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

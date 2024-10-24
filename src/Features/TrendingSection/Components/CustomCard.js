@@ -10,7 +10,8 @@ import {
 } from "@ant-design/icons";
 
 import PillComponent from "./PillComponent";
-import CustomBottomCard from "./CustomBottomCard";
+import RCYCustomBottomCard from "./RCY_CustomBottomCard";
+import HACustomBottomCard from "./HA_CustomBottomCard";
 
 const CustomCard = ({
   cardData,
@@ -137,21 +138,33 @@ const CustomCard = ({
       <div className="card-bottom p-4 h-1/2 bg-white cursor-pointer group">
         {currentTitle === "rental" ||
         currentTitle === "car" ||
-        currentTitle === "yatch" ? (
+        currentTitle === "yatch"
+       ? (
           card_type === currentTitle && (
-            <CustomBottomCard
+            <RCYCustomBottomCard
               cardData={cardData}
               iconData={iconData}
               currentTitle={currentTitle}
             />
           )
-        ) : (
+        ) : currentTitle === "hotel" || currentTitle === "activity" ? (
+          (
+            card_type === currentTitle && (
+              <HACustomBottomCard
+                cardData={cardData}
+                currentTitle={currentTitle}
+                showPrice={showPrice}
+              />
+            )
+          )
+        ):
+        (
           <>
             <div className="location-text flex items-center mb-2">
               <EnvironmentOutlined className="text-gray-500 mr-2" />
               <span className="text-lg text-gray-800">{locationText}</span>
             </div>
-            <div className="place-text text-2xl font-semibold mb-3 group-hover:text-sky-500 transition-colors">
+            <div className="place-text text-2xl text-darky font-semibold mb-3 group-hover:text-sky-500 transition-colors">
               {itemText}
             </div>
             <div className="star-rating flex items-center mb-3 text-2xl">

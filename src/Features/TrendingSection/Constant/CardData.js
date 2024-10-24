@@ -60,6 +60,7 @@ const cardData = [
     card_type: "tour",
   },
   {
+    pointNumber: 3,
     ratingValue: 4.5,
     oldPriceText: "$465.00",
     tourNameText: "Cultural Tours",
@@ -75,6 +76,7 @@ const cardData = [
     card_type: "hotel",
   },
   {
+    pointNumber: 4,
     ratingValue: 4.5,
     oldPriceText: "$465.00",
     tourNameText: "Cultural Tours",
@@ -90,6 +92,7 @@ const cardData = [
     card_type: "hotel",
   },
   {
+    pointNumber: 5,
     ratingValue: 4.5,
     oldPriceText: "$465.00",
     tourNameText: "Cultural Tours",
@@ -105,6 +108,7 @@ const cardData = [
     card_type: "hotel",
   },
   {
+    pointNumber: 3,
     ratingValue: 4.5,
     oldPriceText: "$465.00",
     tourNameText: "Cultural Tours",
@@ -120,6 +124,7 @@ const cardData = [
     card_type: "hotel",
   },
   {
+    pointNumber: 3,
     ratingValue: 3.5,
     oldPriceText: "$465.00",
     tourNameText: "Atraction Tickets",
@@ -135,6 +140,7 @@ const cardData = [
     card_type: "activity",
   },
   {
+    pointNumber: 3,
     ratingValue: 3.5,
     oldPriceText: "$465.00",
     tourNameText: "Atraction Tickets",
@@ -150,6 +156,7 @@ const cardData = [
     card_type: "activity",
   },
   {
+    pointNumber: 5,
     ratingValue: 3.5,
     oldPriceText: "$465.00",
     tourNameText: "Atraction Tickets",
@@ -165,6 +172,7 @@ const cardData = [
     card_type: "activity",
   },
   {
+    pointNumber: 4,
     ratingValue: 3.5,
     oldPriceText: "$465.00",
     tourNameText: "Atraction Tickets",
@@ -437,6 +445,7 @@ const cardData = [
     card_type: "tour",
   },
   {
+    pointNumber: 3,
     ratingValue: 4.5,
     oldPriceText: "$465.00",
     tourNameText: "Cultural Tours",
@@ -452,6 +461,7 @@ const cardData = [
     card_type: "hotel",
   },
   {
+    pointNumber: 4,
     ratingValue: 4.5,
     oldPriceText: "$465.00",
     tourNameText: "Cultural Tours",
@@ -467,6 +477,7 @@ const cardData = [
     card_type: "hotel",
   },
   {
+    pointNumber: 5,
     ratingValue: 4.5,
     oldPriceText: "$465.00",
     tourNameText: "Cultural Tours",
@@ -482,6 +493,7 @@ const cardData = [
     card_type: "hotel",
   },
   {
+    pointNumber: 3,
     ratingValue: 4.5,
     oldPriceText: "$465.00",
     tourNameText: "Cultural Tours",
@@ -497,6 +509,7 @@ const cardData = [
     card_type: "hotel",
   },
   {
+    pointNumber: 3,
     ratingValue: 3.5,
     oldPriceText: "$465.00",
     tourNameText: "Atraction Tickets",
@@ -512,6 +525,7 @@ const cardData = [
     card_type: "activity",
   },
   {
+    pointNumber: 3,
     ratingValue: 3.5,
     oldPriceText: "$465.00",
     tourNameText: "Atraction Tickets",
@@ -527,6 +541,7 @@ const cardData = [
     card_type: "activity",
   },
   {
+    pointNumber: 5,
     ratingValue: 3.5,
     oldPriceText: "$465.00",
     tourNameText: "Atraction Tickets",
@@ -542,6 +557,7 @@ const cardData = [
     card_type: "activity",
   },
   {
+    pointNumber: 5,
     ratingValue: 3.5,
     oldPriceText: "$465.00",
     tourNameText: "Atraction Tickets",
