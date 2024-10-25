@@ -135,24 +135,23 @@ const CustomCard = ({
         </div>
       </div>
 
-      <div className="card-bottom p-4 h-1/2 bg-white cursor-pointer group">
+      <div className="card-bottom p-4 bg-white cursor-pointer group">
         {currentTitle === "rental" ||
         currentTitle === "car" ||
         currentTitle === "yatch" ? (
           card_type === currentTitle && (
-            <RCYCustomBottomCard
-              cardData={cardData}
-              iconData={iconData}
-              currentTitle={currentTitle}
-            />
+            <div><RCYCustomBottomCard
+            cardData={cardData}
+            iconData={iconData}
+            currentTitle={currentTitle}
+          /></div>
           )
         ) : currentTitle === "hotel" || currentTitle === "activity" ? (
           card_type === currentTitle && (
-            <HACustomBottomCard
-              cardData={cardData}
-              currentTitle={currentTitle}
-              showPrice={showPrice}
-            />
+            <div><HACustomBottomCard
+            cardData={cardData}
+            showPrice={showPrice}
+          /></div>
           )
         ) : (
           <>

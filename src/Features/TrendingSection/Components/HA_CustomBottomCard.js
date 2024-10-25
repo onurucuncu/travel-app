@@ -1,12 +1,12 @@
 import { StarFilled, StarOutlined } from "@ant-design/icons";
 import React from "react";
 
-const HACustomBottomCard = ({ cardData, currentTitle, showPrice }) => {
+const HACustomBottomCard = ({ cardData, showPrice }) => {
   const { ratingValue, itemText, pointNumber, reviewText, oldPriceText, currentPriceText
    } = cardData;
 
   return (
-    <div>
+    <div className="flex flex-col gap-3">
       <div className="star-rating flex items-center mb-3 text-md">
         <div className="mr-2">
           {Array.from({ length: 5 }, (_, index) =>
