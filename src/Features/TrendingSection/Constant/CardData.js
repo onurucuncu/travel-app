@@ -316,7 +316,7 @@ const cardData = [
     card_type: "car",
   },
   {
-    pointNumber: 3,
+    pointNumber: 4.6,
     ratingValue: 5,
     currentPriceText: "$350.00",
     reviewText: "1",
