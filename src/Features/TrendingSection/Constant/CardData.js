@@ -61,7 +61,7 @@ const cardData = [
   },
   {
     pointNumber: 3,
-    ratingValue: 4.5,
+    ratingValue: 4.4,
     oldPriceText: "$465.00",
     tourNameText: "Cultural Tours",
     currentPriceText: "$480.00",
@@ -109,7 +109,7 @@ const cardData = [
   },
   {
     pointNumber: 3,
-    ratingValue: 4.5,
+    ratingValue: 4.4,
     oldPriceText: "$465.00",
     tourNameText: "Cultural Tours",
     currentPriceText: "$480.00",
@@ -141,7 +141,7 @@ const cardData = [
   },
   {
     pointNumber: 3,
-    ratingValue: 3.5,
+    ratingValue: 3.4,
     oldPriceText: "$465.00",
     tourNameText: "Atraction Tickets",
     currentPriceText: "$350.00",
@@ -157,7 +157,7 @@ const cardData = [
   },
   {
     pointNumber: 5,
-    ratingValue: 3.5,
+    ratingValue: 3.4,
     oldPriceText: "$465.00",
     tourNameText: "Atraction Tickets",
     currentPriceText: "$712.00",

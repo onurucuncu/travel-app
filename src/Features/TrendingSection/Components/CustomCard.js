@@ -5,13 +5,13 @@ import {
   LoadingOutlined,
   ClockCircleOutlined,
   EnvironmentOutlined,
-  StarFilled,
-  StarOutlined,
 } from "@ant-design/icons";
 
 import PillComponent from "./PillComponent";
 import RCYCustomBottomCard from "./RCY_CustomBottomCard";
 import HACustomBottomCard from "./HA_CustomBottomCard";
+import StarRating from "./StarRating";
+import PriceComp from "./PriceComp";
 
 const CustomCard = ({
   cardData,
@@ -32,11 +32,9 @@ const CustomCard = ({
   };
 
   const {
-    ratingValue,
-    oldPriceText,
     tourNameText,
-    reviewText,
     locationText,
+    reviewText,
     itemText,
     imageUrl,
     timeText,
@@ -63,13 +61,13 @@ const CustomCard = ({
           {currentTitle === "tour" || currentTitle === "rental" ? (
             <div className="flex gap-2">
               {showFeatured && (
-                <div className="">
+                <div>
                   <PillComponent text={featuredText} color="featured" />
                 </div>
               )}
 
               {showPrice && (
-                <div className="">
+                <div>
                   <PillComponent text={discountText} color="discount" />
                 </div>
               )}
@@ -121,14 +119,7 @@ const CustomCard = ({
               </span>
 
               <div className="text-lg font-bold">
-                {showPrice && (
-                  <span className="discount line-through text-md mr-1">
-                    {oldPriceText}
-                  </span>
-                )}
-                <span className="current text-2xl font-bold">
-                  {currentPriceText}
-                </span>
+                <PriceComp cardData={cardData} showPrice={showPrice} />
               </div>
             </div>
           )}
@@ -140,18 +131,19 @@ const CustomCard = ({
         currentTitle === "car" ||
         currentTitle === "yatch" ? (
           card_type === currentTitle && (
-            <div><RCYCustomBottomCard
-            cardData={cardData}
-            iconData={iconData}
-            currentTitle={currentTitle}
-          /></div>
+            <div>
+              <RCYCustomBottomCard
+                cardData={cardData}
+                iconData={iconData}
+                currentTitle={currentTitle}
+              />
+            </div>
           )
         ) : currentTitle === "hotel" || currentTitle === "activity" ? (
           card_type === currentTitle && (
-            <div><HACustomBottomCard
-            cardData={cardData}
-            showPrice={showPrice}
-          /></div>
+            <div>
+              <HACustomBottomCard cardData={cardData} showPrice={showPrice} />
+            </div>
           )
         ) : (
           <>
@@ -163,24 +155,7 @@ const CustomCard = ({
               {itemText}
             </div>
             <div className="star-rating flex items-center mb-3 text-2xl">
-              <div className="mr-2">
-                {Array.from({ length: 5 }, (_, index) =>
-                  index + 0.5 <= ratingValue ? (
-                    <StarFilled
-                      className="mr-1"
-                      key={index}
-                      style={{ color: "#b0d12b" }}
-                    />
-                  ) : (
-                    <StarOutlined
-                      className="mr-1"
-                      key={index}
-                      style={{ color: "#b0d12b" }}
-                    />
-                  )
-                )}
-              </div>
-
+              <StarRating cardData={cardData} />
               <div className="review text-slate-500">({reviewText} review)</div>
             </div>
 
