@@ -32,49 +32,54 @@ const CustomCard = ({
   };
 
   const {
-    tourNameText,
     locationText,
     reviewText,
     itemText,
     imageUrl,
     timeText,
-    currentPriceText,
     featuredText,
     discountText,
     card_type,
   } = cardData;
 
+  const isHotAct = currentTitle === "hotel" || currentTitle === "activity";
+
+  const isRntCrYt =
+    currentTitle === "rental" ||
+    currentTitle === "car" ||
+    currentTitle === "yatch";
+
   return (
     <div
-      className="card border rounded-lg overflow-hidden font-rubik hover:-translate-y-3 hover:shadow-2xl transition delay-150 duration-300 ease-in-out"
-      style={{ height: "540px", width: "360px" }}
+      className="card border rounded-lg font-rubik hover:rounded-lg hover:-translate-y-3 hover:shadow-2xl transition delay-150 duration-300 ease-in-out"
+      style={{ width: "360px" }}
     >
       <div
-        className="card-top flex flex-col justify-between h-1/2 bg-cover bg-center"
+        className="card-top rounded-t-lg flex flex-col justify-between h-64 bg-cover bg-center"
         style={{
           backgroundImage: `url(${imageUrl})`,
           backgroundBlendMode: "overlay",
           backgroundColor: "rgba(0, 0, 0, 0.4)",
         }}
       >
-        <div className="card-top-top flex justify-between pills px-5 pt-7">
-          {currentTitle === "tour" || currentTitle === "rental" ? (
-            <div className="flex gap-2">
-              {showFeatured && (
-                <div>
-                  <PillComponent text={featuredText} color="featured" />
-                </div>
-              )}
+        <div
+          className={`card-top-top flex ${
+            showFeatured || showPrice ? "justify-between" : "justify-end"
+          } pills px-5 pt-7`}
+        >
+          <div className="flex gap-2">
+            {showFeatured && (
+              <div>
+                <PillComponent text={featuredText} color="featured" />
+              </div>
+            )}
 
-              {showPrice && (
-                <div>
-                  <PillComponent text={discountText} color="discount" />
-                </div>
-              )}
-            </div>
-          ) : (
-            <div className="block"> </div>
-          )}
+            {showPrice && (
+              <div>
+                <PillComponent text={discountText} color="discount" />
+              </div>
+            )}
+          </div>
 
           <div className="cursor-pointer">
             {isLoading ? (
@@ -94,28 +99,15 @@ const CustomCard = ({
         </div>
 
         <div className="card-top-bottom px-5 pb-2 text-white">
-          {currentTitle === "hotel" || currentTitle === "activity" ? (
+          {isHotAct ? (
             <div className="location-text text-white flex items-center mb-2">
               <EnvironmentOutlined className="mr-2 text-2xl" />
               <span className="text-lg">{locationText}</span>
             </div>
-          ) : currentTitle === "rental" ||
-            currentTitle === "car" ||
-            currentTitle === "yatch" ? (
-            <div>
-              <span className="text-xl font-semibold  cursor-pointer hover:text-neutral-300 transition delay-150 duration-150 ease-in-out">
-                {itemText}
-              </span>
-              <div className="text-lg font-bold">
-                <span className="current text-2xl font-bold">
-                  {currentPriceText}
-                </span>
-              </div>
-            </div>
           ) : (
             <div>
-              <span className="text-lg cursor-pointer hover:text-neutral-300 transition delay-150 duration-150 ease-in-out">
-                {tourNameText}
+              <span className="text-md cursor-pointer hover:text-neutral-300 transition delay-150 duration-150 ease-in-out">
+                {itemText}
               </span>
 
               <div className="text-lg font-bold">
@@ -126,10 +118,8 @@ const CustomCard = ({
         </div>
       </div>
 
-      <div className="card-bottom p-4 bg-white cursor-pointer group">
-        {currentTitle === "rental" ||
-        currentTitle === "car" ||
-        currentTitle === "yatch" ? (
+      <div className="card-bottom p-3 bg-white cursor-pointer group">
+        {isRntCrYt ? (
           card_type === currentTitle && (
             <div>
               <RCYCustomBottomCard
@@ -139,10 +129,10 @@ const CustomCard = ({
               />
             </div>
           )
-        ) : currentTitle === "hotel" || currentTitle === "activity" ? (
+        ) : isHotAct ? (
           card_type === currentTitle && (
             <div>
-              <HACustomBottomCard cardData={cardData} showPrice={showPrice} />
+              <HACustomBottomCard cardData={cardData} showPrice={showPrice} currentTitle={currentTitle} />
             </div>
           )
         ) : (

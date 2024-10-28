@@ -2,18 +2,21 @@ import React from "react";
 import StarRating from "./StarRating";
 import PriceComp from "./PriceComp";
 
-const HACustomBottomCard = ({ cardData, showPrice }) => {
+const HACustomBottomCard = ({ cardData, showPrice, currentTitle }) => {
   const {
     itemText,
     pointNumber,
     reviewText,
   } = cardData;
 
+  const isHotel = currentTitle === "hotel" 
+
   return (
-    <div className="flex flex-col gap-2">
-      <div className="star-rating flex items-center mb-3 text-lg">
+    <div className="flex flex-col gap-1">
+      { isHotel ? <div className="star-rating flex items-center mb-3 text-lg">
         <StarRating cardData={cardData} />
-      </div>
+      </div> : null}
+      
       <div className="place-text text-darky text-2xl font-semibold mb-3 group-hover:text-sky-500 transition-colors">
         {itemText}
       </div>
