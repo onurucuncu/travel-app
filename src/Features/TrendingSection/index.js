@@ -5,8 +5,6 @@ import CardSection from "./Components/CardSection";
 import iconData from "./Constant/IconData";
 
 const TrendingSection = () => {
-  
-
   const [cardsData, setCardsData] = useState(cardData);
 
   const [currentTitle, setCurrentTitle] = useState("tour");
@@ -15,8 +13,16 @@ const TrendingSection = () => {
 
   return (
     <div className="mt-32 h-screen">
-      <SectionNavbar setCurrentTitle={setCurrentTitle} currentTitle={currentTitle} />
-      <CardSection currentTitle={currentTitle} cardsData={cardsData} iconData={iconData} name={currentTitle} />
+      <SectionNavbar
+        setCurrentTitle={setCurrentTitle}
+        currentTitle={currentTitle}
+      />
+      <CardSection
+        currentTitle={currentTitle}
+        cardsData={cardsData}
+        iconData={iconData}
+        name={currentTitle}
+      />
     </div>
   );
 };

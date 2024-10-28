@@ -152,7 +152,7 @@ const cardData = [
     imageUrl:
       "https://mytravel.madrasthemes.com/wp-content/uploads/2021/11/Climbing-1-300x225.jpg",
     featuredText: null,
-    discountText: "25",
+    discountText: "%25",
     card_type: "activity",
   },
   {
@@ -184,7 +184,7 @@ const cardData = [
     imageUrl:
       "https://mytravel.madrasthemes.com/wp-content/uploads/2021/11/Climbing-1-300x225.jpg",
     featuredText: null,
-    discountText: "25",
+    discountText: "%25",
     card_type: "activity",
   },
   {
@@ -521,7 +521,7 @@ const cardData = [
     imageUrl:
       "https://mytravel.madrasthemes.com/wp-content/uploads/2021/11/parachut1-300x225.jpg",
     featuredText: null,
-    discountText: "25",
+    discountText: "%25",
     card_type: "activity",
   },
   {

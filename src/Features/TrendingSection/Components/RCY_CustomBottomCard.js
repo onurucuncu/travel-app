@@ -81,13 +81,13 @@ const RCYCustomBottomCard = ({ cardData, iconData, currentTitle }) => {
   };
 
   return (
-    <div className="custom-bottom-card flex flex-col px-3">
-      <div className="custom-bottom-top h-1/2 flex flex-col py-3">
+    <div className="custom-bottom-card flex flex-col gap-3 px-3">
+      <div className="custom-bottom-top h-1/2 flex flex-col my-1 py-1">
         <div className="location-text flex mb-2">
           <EnvironmentOutlined className="text-gray-500 mr-2" />
           <span className="text-lg text-gray-800">{locationText}</span>
         </div>
-        <div className="point-rating flex items-center mb-3 text-lg">
+        <div className="point-rating flex items-center text-lg">
           <div className="mr-2 flex items-center text-sky-600">
             <div className="mr-1">{Math.round(pointNumber)}.0/5.0</div>
             <div>{handleAverageText(pointNumber)}</div>
@@ -95,7 +95,7 @@ const RCYCustomBottomCard = ({ cardData, iconData, currentTitle }) => {
           <div className="review text-slate-500">({reviewText} review)</div>
         </div>
       </div>
-      <div className="custom-bottom-bottom py-3 flex items-center flex-wrap text-slate-500 border-t-2">
+      <div className="custom-bottom-bottom flex items-center flex-wrap text-slate-500 border-t-2">
         {renderBottomDetails()}
       </div>
     </div>
