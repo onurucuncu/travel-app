@@ -12,7 +12,7 @@ const TrendingSection = () => {
   console.log(currentTitle, "currentTitle");
 
   return (
-    <div className="mt-32 h-screen">
+    <div>
       <SectionNavbar
         setCurrentTitle={setCurrentTitle}
         currentTitle={currentTitle}

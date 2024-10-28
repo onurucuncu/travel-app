@@ -4,7 +4,7 @@ import CustomCard from "./CustomCard";
 const CardSection = ({ currentTitle, cardsData, iconData, name }) => {
 
   return (
-    <div className="titles-card w-full h-32 flex justify-center mt-5">
+    <div className="titles-card w-full flex justify-center mt-5">
       <div className="w-11/12 flex justify-between flex-wrap gap-10 px-20">
       {cardsData.map(
         (cardData, index) =>
