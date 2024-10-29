@@ -1,12 +1,12 @@
 import React from 'react'
 import TravelTips from './Components/TravelTips'
-import WhyChoose from './Components/WhyChoose'
+import Blogs from './Components/Blogs'
 
 const FooterSection = () => {
   return (
     <div className=''>
       <TravelTips />
-      <WhyChoose />
+      <Blogs />
     </div>
   )
 }
